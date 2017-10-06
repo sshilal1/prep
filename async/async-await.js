@@ -69,6 +69,17 @@ async function asyncAwaitIsYourNewBestFriend () {
   console.log('asyncAwaitIsYourNewBestFriend', { user, friends, photo })
 }
 
+async function asyncAwaitLoops () {
+  const api = new Api()
+  const user = await api.getUser()
+  const friends = await api.getFriends(user.id)
+
+  for (let friend of friends) {
+    let moreFriends = await api.getFriends(friend.id);
+    console.log('asyncAwaitLoops', moreFriends);
+  }
+}
+
 /************
 Calling "await" in front of a promise pauses the flow of the function
 until the promise has resolved, and assigns the result to the variable 
@@ -76,6 +87,6 @@ to the left of the equal sign. This way we can program an asynchronous
 operation flow as though it were a normal synchronous series of commands.
 *************/
 
-asyncAwaitIsYourNewBestFriend();
+asyncAwaitLoops();
 //promiseChain();
 //callbackHell();
