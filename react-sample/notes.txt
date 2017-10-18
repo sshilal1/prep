@@ -1,4 +1,5 @@
 https://reactjs.org/docs/installation.html#creating-a-new-application
+https://medium.com/javascript-training/beginner-s-guide-to-webpack-b1f1a3638460
 
 draw up index.hmtl and app.js
 npm i react, react-dom, webpack
