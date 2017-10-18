@@ -1,3 +1,5 @@
+https://reactjs.org/docs/installation.html#creating-a-new-application
+
 draw up index.hmtl and app.js
 npm i react, react-dom, webpack
 npm i --save-dev babel-loader babel-core babel-preset-env babel-preset-es2015 babel-preset-react babel-preset-stage-0
