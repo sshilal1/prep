@@ -1,0 +1,28 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The HTML5 Herald</title>
+  <div id="color" style="height:100px;width:100px;background-color:black"></div>
+  <button id="makeblue">Blue</button>
+  <button id="makered">Red</button>
+</head>
+
+<body>
+	<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+  	$('#makeblue').click(function() {
+  		$.get('/blue', function(data) {
+  			$('#color').css("background-color",data);
+  		})
+  	})
+  	$('#makered').click(function() {
+  		$.get('/red', function(data) {
+  			$('#color').css("background-color",data);
+  		})
+  	})
+  </script>
+</body>
+</html>
